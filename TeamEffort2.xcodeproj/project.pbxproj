@@ -14,6 +14,7 @@
 		6205D5D62BC6D9F200DCC95F /* TeamEffort2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205D5D52BC6D9F200DCC95F /* TeamEffort2Tests.swift */; };
 		6205D5E02BC6D9F200DCC95F /* TeamEffort2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205D5DF2BC6D9F200DCC95F /* TeamEffort2UITests.swift */; };
 		6205D5E22BC6D9F200DCC95F /* TeamEffort2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205D5E12BC6D9F200DCC95F /* TeamEffort2UITestsLaunchTests.swift */; };
+		6205D5EF2BC6E02800DCC95F /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		6205D5DB2BC6D9F200DCC95F /* TeamEffort2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamEffort2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6205D5DF2BC6D9F200DCC95F /* TeamEffort2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEffort2UITests.swift; sourceTree = "<group>"; };
 		6205D5E12BC6D9F200DCC95F /* TeamEffort2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEffort2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		6205D5C32BC6D9F000DCC95F /* TeamEffort2 */ = {
 			isa = PBXGroup;
 			children = (
+				6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */,
 				6205D5C42BC6D9F000DCC95F /* TeamEffort2App.swift */,
 				6205D5C62BC6D9F000DCC95F /* ContentView.swift */,
 				6205D5C82BC6D9F200DCC95F /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			files = (
 				6205D5C72BC6D9F000DCC95F /* ContentView.swift in Sources */,
 				6205D5C52BC6D9F000DCC95F /* TeamEffort2App.swift in Sources */,
+				6205D5EF2BC6E02800DCC95F /* SecondaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
