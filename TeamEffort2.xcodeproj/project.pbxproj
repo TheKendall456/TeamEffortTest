@@ -16,6 +16,7 @@
 		6205D5E22BC6D9F200DCC95F /* TeamEffort2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205D5E12BC6D9F200DCC95F /* TeamEffort2UITestsLaunchTests.swift */; };
 		6205D5EF2BC6E02800DCC95F /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */; };
 		622749B22BCCD1BC00279E13 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622749B12BCCD1BC00279E13 /* HomeView.swift */; };
+		622749B42BCD675800279E13 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622749B32BCD675800279E13 /* MovieData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		6205D5E12BC6D9F200DCC95F /* TeamEffort2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEffort2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
 		622749B12BCCD1BC00279E13 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		622749B32BCD675800279E13 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		6205D5C32BC6D9F000DCC95F /* TeamEffort2 */ = {
 			isa = PBXGroup;
 			children = (
+				622749B32BCD675800279E13 /* MovieData.swift */,
 				622749B12BCCD1BC00279E13 /* HomeView.swift */,
 				6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */,
 				6205D5C42BC6D9F000DCC95F /* TeamEffort2App.swift */,
@@ -266,6 +269,7 @@
 				6205D5C72BC6D9F000DCC95F /* ContentView.swift in Sources */,
 				622749B22BCCD1BC00279E13 /* HomeView.swift in Sources */,
 				6205D5C52BC6D9F000DCC95F /* TeamEffort2App.swift in Sources */,
+				622749B42BCD675800279E13 /* MovieData.swift in Sources */,
 				6205D5EF2BC6E02800DCC95F /* SecondaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

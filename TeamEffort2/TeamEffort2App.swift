@@ -14,4 +14,5 @@ struct TeamEffort2App: App {
             ContentView()
         }
     }
+    
 }
