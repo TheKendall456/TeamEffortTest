@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 @main
 struct TeamEffort2App: App {
     var body: some Scene {
