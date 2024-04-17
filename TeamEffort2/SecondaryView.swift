@@ -30,24 +30,43 @@ struct SecondaryView: View {
       }
     
     func fetchData() async throws -> String  {
-        let url = URL(string: "https://api.themoviedb.org/3/find/external_id")!
+
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing")!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "external_source", value: ""),
+          URLQueryItem(name: "language", value: "en-US"),
+          URLQueryItem(name: "page", value: "1"),
         ]
         components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
-        
+
         var request = URLRequest(url: components.url!)
         request.httpMethod = "GET"
         request.timeoutInterval = 10
         request.allHTTPHeaderFields = [
-            "accept": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNjQ5ODg1YTBmYWI2NThkZDNlMTI0MmY3NWE4ODExOSIsInN1YiI6IjY1Mzk5NDZiMjgxMWExMDE0ZDYwYWZiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dT7HyNSXcyBaeud8FN0XzNCmNpAWXFCzJ7WmrGGJT9A"
+          "accept": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNjQ5ODg1YTBmYWI2NThkZDNlMTI0MmY3NWE4ODExOSIsInN1YiI6IjY1Mzk5NDZiMjgxMWExMDE0ZDYwYWZiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dT7HyNSXcyBaeud8FN0XzNCmNpAWXFCzJ7WmrGGJT9A"
         ]
-        
+
         let (data, response) = try await URLSession.shared.data(for: request)
-        return String(decoding: data, as: UTF8.self)
         
+        // Decode the JSON response to extract movie data
+        let decoder = JSONDecoder()
+        let movieResponse = try decoder.decode(MovieResponse.self, from: data)
+        
+        // Extract relevant movie data
+        let movies = movieResponse.results.map { $0.title }
+        
+        // Format the extracted data as a string
+        let formattedData = movies.joined(separator: "\n")
+        
+        return formattedData
+        
+    }
+    struct MovieResponse: Codable {
+        struct Movie: Codable {
+            let title: String
+        }
+        let results: [Movie]
     }
 }
 
