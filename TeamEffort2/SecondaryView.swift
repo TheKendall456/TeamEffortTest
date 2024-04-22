@@ -3,23 +3,32 @@ import SwiftUI
 struct SecondaryView: View {
     @State private var movies: [Movie] = []
 
+
     var body: some View {
         List(movies, id: \.id) { movie in
-            VStack {
+            VStack (alignment: .center) {
+             
                 Text(movie.title)
-                Text(movie.posterPath ?? "No poster available")
+                //Text(movie.posterPath ?? "No poster available")
                     .foregroundColor(.secondary)
                 // Load image asynchronously
                 AsyncImage(url: movie.posterURL) { image in
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 150)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 100, height: 150.0)
+                       
+                       
                 } placeholder: {
                     // Placeholder image or activity indicator
                     ProgressView()
                 }
+                .padding(.horizontal)
+                
             }
+            .padding(.vertical)
+            .frame(width: 500.0)
+          
         }
         .onAppear {
             // Fetch data when the view appears
@@ -55,7 +64,7 @@ struct SecondaryView: View {
         // Decode the JSON response to extract movie data
         let decoder = JSONDecoder()
         let movieResponse = try decoder.decode(MovieResponse.self, from: data)
-        
+
         return Array(movieResponse.results.prefix(10))
     }
 }
@@ -66,16 +75,22 @@ struct Movie: Codable, Identifiable {
     let title: String
     let posterPath: String?
 
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case posterPath = "poster_path"
+    }
+
     // Computed property to get the full URL of the poster image
     var posterURL: URL? {
-        if let posterPath = posterPath {
-            return URL(string: "https://image.tmdb.org/t/p/w500//\(posterPath)")
-        } else {
+        guard let posterPath = posterPath,
+              !posterPath.isEmpty,
+              posterPath != "null" else {
             return nil
         }
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath)")
     }
 }
-
 // Define a struct to represent the movie response
 struct MovieResponse: Codable {
     let results: [Movie]
