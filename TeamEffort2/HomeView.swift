@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         
-        Text("This is the Home Screen")
+        Text("Movies")
             .font(.largeTitle)
 
     }

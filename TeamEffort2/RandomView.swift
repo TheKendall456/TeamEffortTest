@@ -1,11 +1,5 @@
-//
-//  RandomView.swift
-//  TeamEffort2
-//
-//  Created by GOETHALS, KENDALL A. on 4/24/24.
-//
-
 import SwiftUI
+
 
 struct RandomView: View {
     var body: some View {

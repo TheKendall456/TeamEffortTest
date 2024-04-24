@@ -14,8 +14,8 @@
             filePath = "TeamEffort2/SecondaryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -92,8 +92,8 @@
             filePath = "TeamEffort2/SecondaryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -170,8 +170,8 @@
             filePath = "TeamEffort2/SecondaryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "Movie"
             landmarkType = "14">
          </BreakpointContent>
@@ -186,8 +186,8 @@
             filePath = "TeamEffort2/SecondaryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -196,32 +196,141 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "48646E8E-AEAB-4A3B-A61B-E1714409ADD0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TeamEffort2/SecondaryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "fetchData()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48646E8E-AEAB-4A3B-A61B-E1714409ADD0 - 9305a046ced4f6f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamEffort2.Movie.posterURL.getter : Swift.Optional&lt;Foundation.URL&gt;"
+                  moduleName = "TeamEffort2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kg0956975/Documents/TeamEffortTest/TeamEffort2/SecondaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  uuid = "48646E8E-AEAB-4A3B-A61B-E1714409ADD0 - e75d6b23d9b649a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TeamEffort2.SecondaryView.fetchData() async throws -&gt; Swift.Array&lt;TeamEffort2.Movie&gt;"
+                  moduleName = "TeamEffort2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kg0956975/Documents/TeamEffortTest/TeamEffort2/SecondaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9F29C469-0707-484D-8597-BCD5A5F1B9C2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TeamEffort2/SecondaryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "fetchData()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9F29C469-0707-484D-8597-BCD5A5F1B9C2 - 9305a046ced4f652"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamEffort2.Movie.posterURL.getter : Swift.Optional&lt;Foundation.URL&gt;"
+                  moduleName = "TeamEffort2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kg0956975/Documents/TeamEffortTest/TeamEffort2/SecondaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "9F29C469-0707-484D-8597-BCD5A5F1B9C2 - 4149c304578f8af8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TeamEffort2.SecondaryView.fetchData() async throws -&gt; Swift.Array&lt;TeamEffort2.Movie&gt;"
+                  moduleName = "TeamEffort2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kg0956975/Documents/TeamEffortTest/TeamEffort2/SecondaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1952">
+               </Location>
+               <Location
+                  uuid = "9F29C469-0707-484D-8597-BCD5A5F1B9C2 - 64e937b6059f45e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TeamEffort2.SecondaryView.fetchData() async throws -&gt; Swift.Array&lt;TeamEffort2.Movie&gt;"
+                  moduleName = "TeamEffort2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kg0956975/Documents/TeamEffortTest/TeamEffort2/SecondaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "9F29C469-0707-484D-8597-BCD5A5F1B9C2 - e75d6b23d9b64906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TeamEffort2.SecondaryView.fetchData() async throws -&gt; Swift.Array&lt;TeamEffort2.Movie&gt;"
+                  moduleName = "TeamEffort2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kg0956975/Documents/TeamEffortTest/TeamEffort2/SecondaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "9F29C469-0707-484D-8597-BCD5A5F1B9C2 - d62aa7511cc9e707"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TeamEffort2.SecondaryView.fetchData() async throws -&gt; Swift.Array&lt;TeamEffort2.Movie&gt;"
+                  moduleName = "TeamEffort2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kg0956975/Documents/TeamEffortTest/TeamEffort2/SecondaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -234,8 +343,8 @@
             filePath = "TeamEffort2/SecondaryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
             landmarkName = "SecondaryView"
             landmarkType = "14">
          </BreakpointContent>

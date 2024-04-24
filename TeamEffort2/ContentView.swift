@@ -21,9 +21,25 @@ struct ContentView: View {
                 }
             SecondaryView()
                 .tabItem {
-                    Image(systemName: "square.and.pencil")
-                    Text("Secondary")
+                    Image(systemName: "movieclapper.fill")
+                    Text("Movies")
                 }
+            FeatureView()
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("Feature")
+                }
+            RandomView()
+                .tabItem {
+                    Image(systemName: "questionmark.app")
+                    Text("Random")
+                }
+            SearchView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass.circle")
+                    Text("Search")
+                }
+            
 
 
              }
