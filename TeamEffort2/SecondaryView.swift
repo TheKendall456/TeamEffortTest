@@ -14,7 +14,8 @@ struct SecondaryView: View {
                 
                 Text(movie.title)//movie title
                 //Text(movie.posterPath ?? "No poster available")
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.black)
+                    .italic()
                 
                 // Load image asynchronously
                 //uses the image url to pull image
@@ -23,8 +24,11 @@ struct SecondaryView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 100, height: 150.0)
-                    
+                        .frame(width: 150, height: 250.0)
+                        .cornerRadius(10)
+                        .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
+                        .padding(10)
+                        
                     
                 } placeholder: {
                     // Placeholder image or activity indicator
@@ -36,6 +40,7 @@ struct SecondaryView: View {
             //sets padding and frame width for vstack
             .padding(.vertical)
             .frame(width: 500.0)
+            
             
         }
         //calls when page is called

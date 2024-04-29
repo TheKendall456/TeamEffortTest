@@ -38,7 +38,9 @@ struct SearchView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 100, height: 150.0)
-                    
+                        .cornerRadius(10)
+                        .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
+                        .padding(10)
                     
                 } placeholder: {
                     // Placeholder image or activity indicator

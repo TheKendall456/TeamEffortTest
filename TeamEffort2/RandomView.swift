@@ -33,13 +33,20 @@ struct RandomView: View {
                 if let randomMovie = movieFetcher.setMovies.randomElement() {
                     // Display details of the randomly selected movie
                     Text(randomMovie.title)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.white)
+                        .bold()
+                        .underline()
+                        .italic()
+                    
                     
                     AsyncImage(url: randomMovie.posterURL) { image in
                         image
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 100, height: 150.0)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 300, height: 450.0)
+                                .cornerRadius(10)
+                                .shadow(color: Color.black.opacity(0.7), radius: 6, x: 0, y: 2)
+                                .padding(10)
                     } placeholder: {
                         ProgressView()
                     }
@@ -51,6 +58,13 @@ struct RandomView: View {
             }
             .padding(.vertical)
             .frame(width: 500.0)
+            .frame(maxWidth: .infinity, maxHeight: .infinity) // Expand to fill parent view
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [Color.black, Color.white]),
+                                       startPoint: .top,
+                                       endPoint: .bottom)
+                            .edgesIgnoringSafeArea(.all) // Ignore safe area for gradient
+                    )
             .onAppear {
                 // Fetch movies data when the view appears
                 movieFetcher.getMovies()
