@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var searchText: String = ""
+    
     var body: some View {
         //apiKey = e649885a0fab658dd3e1242f75a88119
         TabView {
@@ -34,7 +36,7 @@ struct ContentView: View {
                     Image(systemName: "questionmark.app")
                     Text("Random")
                 }
-            SearchView()
+            SearchView(searchText: $searchText)
                 .tabItem {
                     Image(systemName: "magnifyingglass.circle")
                     Text("Search")
