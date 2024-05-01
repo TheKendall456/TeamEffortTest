@@ -9,10 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
+        VStack{
+            Text("Movies")
+                .font(.largeTitle)
+        }
         
-        Text("Movies")
-            .font(.largeTitle)
-
     }
 }
 

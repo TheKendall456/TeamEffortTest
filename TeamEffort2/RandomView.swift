@@ -3,6 +3,9 @@ import SwiftUI
 class MovieFetcher: ObservableObject {
     @Published var setMovies: [Movie] = []
     
+
+
+    
     func getMovies() {
         Task {
             do {
@@ -27,9 +30,11 @@ class MovieFetcher: ObservableObject {
 struct RandomView: View {
 
         @StateObject private var movieFetcher = MovieFetcher()
-        
+        @State private var refreshToggle = false
         var body: some View {
+            
             VStack(alignment: .center) {
+                
                 if let randomMovie = movieFetcher.setMovies.randomElement() {
                     // Display details of the randomly selected movie
                     Text(randomMovie.title)
@@ -55,6 +60,11 @@ struct RandomView: View {
                     Text("No movies available")
                         .foregroundColor(.secondary)
                 }
+                
+                Button("Refresh") {
+                                self.refreshToggle.toggle()
+                }
+                Text("Page Status: \(refreshToggle ? "Refreshed!" : "Initial Content")").foregroundColor(Color.clear)
             }
             .padding(.vertical)
             .frame(width: 500.0)

@@ -4,18 +4,19 @@ struct SecondaryView: View {
     
     @State private var movies: [Movie] = []
     
-    
     var body: some View {
         //stores everything in a list to then be recalled for each movie stored
         List(movies, id: \.id) { movie in
             //Vstack that is aligned to the center
-            
+
             VStack (alignment: .center) {
+                
                 
                 Text(movie.title)//movie title
                 //Text(movie.posterPath ?? "No poster available")
                     .foregroundColor(.black)
                     .italic()
+                    
                 
                 // Load image asynchronously
                 //uses the image url to pull image
