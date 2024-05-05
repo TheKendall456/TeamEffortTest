@@ -37,6 +37,7 @@ struct RandomView: View {
                 
                 if let randomMovie = movieFetcher.setMovies.randomElement() {
                     // Display details of the randomly selected movie
+                    
                     Text(randomMovie.title)
                         .foregroundColor(.white)
                         .bold()

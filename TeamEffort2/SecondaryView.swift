@@ -8,15 +8,16 @@ struct SecondaryView: View {
         //stores everything in a list to then be recalled for each movie stored
         List(movies, id: \.id) { movie in
             //Vstack that is aligned to the center
-
+            
             VStack (alignment: .center) {
+                
                 
                 
                 Text(movie.title)//movie title
                 //Text(movie.posterPath ?? "No poster available")
                     .foregroundColor(.black)
                     .italic()
-                    
+                
                 
                 // Load image asynchronously
                 //uses the image url to pull image
@@ -29,13 +30,25 @@ struct SecondaryView: View {
                         .cornerRadius(10)
                         .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
                         .padding(10)
-                        
+                    
                     
                 } placeholder: {
                     // Placeholder image or activity indicator
                     ProgressView()
                 }
                 .padding(.horizontal)
+                
+                // Add button to add movie to favorites
+                Button(action: {
+                    FeatureAdd.addToFavorites(movieID: movie.id)
+                }) {
+                    Text("Add to Favorites")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding(.top)
                 
             }
             //sets padding and frame width for vstack
@@ -57,12 +70,8 @@ struct SecondaryView: View {
             }
         }
     }
-    
-#if DEBUG
-    struct SecondaryView_Previews: PreviewProvider {
-        static var previews: some View {
-            SecondaryView()
-        }
-    }
-#endif
 }
+    
+    #Preview{
+        SecondaryView()
+    }
