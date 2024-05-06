@@ -110,16 +110,16 @@
 		6205D5C32BC6D9F000DCC95F /* TeamEffort2 */ = {
 			isa = PBXGroup;
 			children = (
+				6205D5C62BC6D9F000DCC95F /* ContentView.swift */,
+				622749B12BCCD1BC00279E13 /* HomeView.swift */,
+				6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */,
+				4751209C2BD94CCE0086B7B2 /* FeatureView.swift */,
+				4751209E2BD94D280086B7B2 /* RandomView.swift */,
+				475120A02BD94FE10086B7B2 /* SearchView.swift */,
+				E544DA7F2BD9561900536AA0 /* GlobalSwift.swift */,
 				62B7FE962BE7385200C6EC9A /* FeatureAdd.swift */,
 				62B7FE9A2BE73C7000C6EC9A /* GetFeatured.swift */,
-				4751209C2BD94CCE0086B7B2 /* FeatureView.swift */,
-				6205D5EE2BC6E02800DCC95F /* SecondaryView.swift */,
-				E544DA7F2BD9561900536AA0 /* GlobalSwift.swift */,
-				475120A02BD94FE10086B7B2 /* SearchView.swift */,
-				4751209E2BD94D280086B7B2 /* RandomView.swift */,
-				622749B12BCCD1BC00279E13 /* HomeView.swift */,
 				6205D5C42BC6D9F000DCC95F /* TeamEffort2App.swift */,
-				6205D5C62BC6D9F000DCC95F /* ContentView.swift */,
 				6205D5C82BC6D9F200DCC95F /* Assets.xcassets */,
 				6205D5CA2BC6D9F200DCC95F /* Preview Content */,
 			);

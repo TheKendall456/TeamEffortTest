@@ -57,6 +57,21 @@ struct RandomView: View {
                         ProgressView()
                     }
                     .padding(.horizontal)
+                    
+                    // Add button to add movie to favorites
+                    Button(action: {
+                        FeatureAdd.addToFavorites(movieID: randomMovie.id)
+                    }) {
+                        Text("Add to Favorites")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .padding(.bottom)
+                    
+                    
+                    
                 } else {
                     Text("No movies available")
                         .foregroundColor(.secondary)

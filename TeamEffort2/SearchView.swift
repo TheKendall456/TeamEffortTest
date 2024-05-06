@@ -12,60 +12,70 @@ struct SearchView: View {
     @Binding var searchText: String
     
     var body: some View {
-        
-        HStack {
+        VStack {
             TextField("Search", text: $searchText)
                 .padding(8)
                 .background(Color(.systemGray5))
                 .cornerRadius(8)
                 .padding(.horizontal)
-            Spacer()
-        }
-        //stores everything in a list to then be recalled for each movie stored
-        List(movies, id: \.id) { movie in
-            //Vstack that is aligned to the center
-            VStack (alignment: .center) {
-                
-                Text(movie.title)//movie title
-                //Text(movie.posterPath ?? "No poster available")
-                    .foregroundColor(.secondary)
-                
-                // Load image asynchronously
-                //uses the image url to pull image
-                //from api and stores it in this image
-                AsyncImage(url: movie.posterURL) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 100, height: 150.0)
-                        .cornerRadius(10)
-                        .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
-                        .padding(10)
-                    
-                } placeholder: {
-                    // Placeholder image or activity indicator
-                    ProgressView()
-                }
-                .padding(.horizontal)
-                
-            }
-            //sets padding and frame width for vstack
-            .padding(.vertical)
-            .frame(width: 500.0)
             
-        }
-        //calls when page is called
-        .onAppear {
-            Task {
-                do {
-                    movies = try await fetchSearchData(for: searchText)
-                } catch {
-                    print("Error: \(error)")
+            List(movies, id: \.id) { movie in
+                VStack(alignment: .center) {
+                    Text(movie.title)
+                        .foregroundColor(.secondary)
+                    
+                    AsyncImage(url: movie.posterURL) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 100, height: 150.0)
+                            .cornerRadius(10)
+                            .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
+                            .padding(10)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .padding(.horizontal)
+                    
+                    // Add button to add movie to favorites
+                    Button(action: {
+                        FeatureAdd.addToFavorites(movieID: movie.id)
+                    }) {
+                        Text("Add to Favorites")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .padding(.top)
+                    
                 }
+                .padding(.vertical)
+                .frame(width: 500.0)
+            }
+        }
+        .onAppear {
+            // Fetch data when the view appears
+            fetchData()
+        }
+        .onChange(of: searchText) { _ in
+            // Fetch data whenever searchText changes
+            fetchData()
+        }
+    }
+    
+    func fetchData() {
+        Task {
+            do {
+                movies = try await fetchSearchData(for: searchText)
+            } catch {
+                print("Error: \(error)")
             }
         }
     }
 }
+
+
 
 func fetchSearchData(for query: String) async throws -> [Movie] {
     let urlString = "https://api.themoviedb.org/3/search/movie"
@@ -105,12 +115,9 @@ func fetchSearchData(for query: String) async throws -> [Movie] {
 
 
 
-#if DEBUG
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView(searchText: .constant(""))
-    }
+
+#Preview {
+    SearchView(searchText: .constant(""))
 }
-#endif
 
 

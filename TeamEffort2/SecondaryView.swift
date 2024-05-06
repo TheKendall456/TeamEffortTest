@@ -8,9 +8,7 @@ struct SecondaryView: View {
         //stores everything in a list to then be recalled for each movie stored
         List(movies, id: \.id) { movie in
             //Vstack that is aligned to the center
-            
             VStack (alignment: .center) {
-                
                 
                 
                 Text(movie.title)//movie title
@@ -31,12 +29,14 @@ struct SecondaryView: View {
                         .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
                         .padding(10)
                     
-                    
                 } placeholder: {
                     // Placeholder image or activity indicator
                     ProgressView()
                 }
                 .padding(.horizontal)
+                
+                
+                
                 
                 // Add button to add movie to favorites
                 Button(action: {

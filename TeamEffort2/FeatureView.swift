@@ -43,6 +43,8 @@ struct FeatureView: View {
             }
             .padding(.vertical)
         }
+        
+        
         .onAppear {
             // Fetch data when the view appears
             fetchFavoriteMovies { result in
